@@ -8,14 +8,16 @@ This repository contains:
 ## Description
 The core has 256bytes memory, used to contain the program,
 the program stack and constants.
+
 For simplicity, I did not implement the inner components such as ALU,
 and in some operations I loosely used undefined registers.
 On future progress this could be improved.
+
 Memory layout:
-	Program: 0-127
-	Stack: 128-199
-	Constants: 200-254
-	Exit: 255
+1. Program: 0-127
+1. Stack: 128-199
+1. Constants: 200-254
+1. Exit: 255
 
 ## Current registers:
 	PP: Program pointer (i.e. program counter)
@@ -43,8 +45,10 @@ Memory layout:
 	POP: Pop last stack value to R0 and dec SP
 	EXIT: Exit
 
+
 ## An example for the assembly code
-	LB, 127
+```asm
+ 	LB, 127
 	MV_R0
 	SINZ
 	JMP, 255
@@ -63,6 +67,6 @@ Memory layout:
 	JMP, 0
 	.127:2
 	.255:255
-
-Explanation: Load the value at byte 127 to R1, keep it at R0. Then, if it is zero goto byte 255 (exit).
+```
+*Explanation:* Load the value at byte 127 to R1, keep it at R0. Then, if it is zero goto byte 255 (exit).
 Otherwise, output "Hello World!", decrement R0, move it to R1 and store it back at byte 127
