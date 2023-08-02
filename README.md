@@ -70,3 +70,18 @@ Memory layout:
 ```
 *Explanation:* Load the value at byte 127 to R1, keep it at R0. Then, if it is zero goto byte 255 (exit).
 Otherwise, output "Hello World!", decrement R0, move it to R1 and store it back at byte 127
+
+### To run the example:
+1. Convert the assembly file to machine code using 
+```python
+python3 asm_compiler.py multiple_hello_world.asm
+```
+2. Compile the cpu code using
+```bash
+make clean all
+```
+3. Run the machine code (default to *prog*) using
+```bash
+./main prog
+```
+
