@@ -3,7 +3,7 @@
 This repository contains:
 	- an 8 bit implementation
 	- an assembly compiler
-	- 2 assemble example programs
+	- 3 assemble example programs
 
 ## Description
 The core has 256bytes memory, used to contain the program,

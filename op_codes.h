@@ -15,5 +15,7 @@ enum instructions {
 	SINZ,
 	PUSH,
 	POP,
+	CALL,
+	RET,
 	EXIT,
 };

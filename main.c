@@ -61,6 +61,13 @@ int main(int argc, char *argv[])
 				break;
 			case NOP:
 				continue;
+				break;
+			case CALL:
+				call();
+				break;
+			case RET:
+				ret();
+				break;
 			default:
 				exit(0);
 		}

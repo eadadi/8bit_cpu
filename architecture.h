@@ -85,3 +85,16 @@ void pop()
 {
 	R0 = mem[++SP];
 }
+
+void call()
+{
+	R0 = PP;
+	push();
+	PP = R1;
+}
+
+void ret()
+{
+	pop();
+	PP = R0;
+}
