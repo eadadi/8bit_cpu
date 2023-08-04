@@ -1,4 +1,4 @@
-# An implementation of 8 bit cpu
+# 8 Bit Cpu
 
 This repository contains:
 	- an 8 bit implementation
@@ -19,14 +19,14 @@ Memory layout:
 1. Constants: 200-254
 1. Exit: 255
 
-## Current registers:
+## Available Registers:
 	PP: Program pointer (i.e. program counter)
 	SP: Stack pointer	
 	In: Current instruction
 	R0: General purpose register
 	R1: General purpose register
 
-## Current supported opcodes are:
+## Available Opcodes:
 	NOP: Do nothing
 	ROUT: Read from outstream to R0
 	WOUT: Write from R0 to outstream (until R0 = 0)
@@ -48,7 +48,7 @@ Memory layout:
 	EXIT: Exit
 
 
-## An example for the assembly code
+## Example
 ```asm
  	LB, 127
 	MV_R0
@@ -73,7 +73,7 @@ Memory layout:
 *Explanation:* Load the value at byte 127 to R1, keep it at R0. Then, if it is zero goto byte 255 (exit).
 Otherwise, output "Hello World!", decrement R0, move it to R1 and store it back at byte 127
 
-### To run the example:
+### Running the example:
 1. Convert the assembly file to machine code using 
 ```python
 python3 asm_compiler.py multiple_hello_world.asm
