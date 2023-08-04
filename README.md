@@ -1,9 +1,6 @@
 # 8 Bit Cpu
-
-This repository contains:
-	- an 8 bit implementation
-	- an assembly compiler
-	- 3 assemble example programs
+This project has 8 bit cpu implementation alongisde an assembly compiler,
+and few code examples.
 
 ## Description
 The core has 256bytes memory, used to contain the program,
@@ -53,7 +50,7 @@ Memory layout:
  	LB, 127
 	MV_R0
 	SINZ
-	JMP, 255
+	EXIT
 	WOUT
 	STR_START
 	Hello World!
@@ -68,10 +65,8 @@ Memory layout:
 	WB, 127
 	JMP, 0
 	.127:2
-	.255:255
 ```
-*Explanation:* Load the value at byte 127 to R1, keep it at R0. Then, if it is zero goto byte 255 (exit).
-Otherwise, output "Hello World!", decrement R0, move it to R1 and store it back at byte 127
+*Explanation:*  The value at memory address 127 hold the number of reptitions. The program is to load this value, and compare it to zero. If it is zero, exit the program. Otherwise, print the string, pirnt a new line character, decrement the remaining number of prints and store it at memory address 127.
 
 ### Running the example:
 1. Convert the assembly file to machine code using 

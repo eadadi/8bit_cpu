@@ -67,13 +67,13 @@ void move_to_r0()
 void skip_if_r0_zero()
 {
 	if(!R0)
-		PP+=2;
+		PP += 1;
 }
 
 void skip_if_r0_not_zero()
 {
 	if(R0)
-		PP+=2;
+		PP += 1;
 }
 
 void push()

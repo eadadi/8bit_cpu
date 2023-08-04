@@ -1,7 +1,7 @@
 LB, 127
 MV_R0
 SINZ
-JMP, 255
+EXIT
 WOUT
 STR_START
 Hello World!
@@ -16,4 +16,3 @@ MV_R1
 WB, 127
 JMP, 0
 .127:2
-.255:255
