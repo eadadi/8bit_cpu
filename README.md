@@ -33,8 +33,8 @@ Memory layout:
 	JMP: Advance PP to given argument
 	LB: Read next byte to R0, then set R1 to the memory value at offset R0
 	WB: Read next byte to R0, then set memory offset R0 to R1
-	ADDI: Add a constant to R0. The constant is the consequent byte.
-	SUBI: Decrement a constant from R0. The constant is the consequent byte.
+	ADDI: Add a constant to R0. The constant is the consequent byte
+	SUBI: Decrement a constant from R0. The constant is the consequent byte
 	ADD: Sum R0 and R1 to R0
 	SUB: Sub R1 from R0 to R0
 	MV_R1: Move R0 to R1
@@ -43,6 +43,8 @@ Memory layout:
 	SINZ: Skip next instruction if R0 is not zero
 	PUSH: Push R0 to stack and advance SP
 	POP: Pop last stack value to R0 and dec SP
+	CALL: Push PP to stack (override R0), and set PP to R1
+	RET: Pop last stack value, and set PP to it
 	EXIT: Exit
 
 
